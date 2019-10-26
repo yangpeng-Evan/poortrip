@@ -15,7 +15,7 @@
             <h3 class="text-left text-success">
                 欢迎您:${name}
             </h3>
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" id="tripForm">
                 <div class="form-group">
                     <label for="startLand" class="col-sm-2 control-label">出发地</label>
                     <div class="col-sm-10">

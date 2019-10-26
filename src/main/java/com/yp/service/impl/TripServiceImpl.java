@@ -55,6 +55,8 @@ public class TripServiceImpl implements TripService {
 
     @Override
     public void add(TripInfo tripInfo) {
+        User user = (User) SecurityUtils.getSubject().getPrincipal();
+        tripInfo.setUserId(user.getId());
         int count = tripMapper.insertSelective(tripInfo);
         if (count != 1){
             log.error("【添加旅游信息】 添加旅游信息失败！！！tripInfo={}",tripInfo);

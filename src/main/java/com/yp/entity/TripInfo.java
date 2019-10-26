@@ -27,12 +27,12 @@ public class TripInfo  implements Serializable {
 	private Integer targetLand;
 
 	@Column(name = "start_date")
-	@DateTimeFormat
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@NotNull(message = "出发时间不能为空！！！")
 	private java.util.Date startDate;
 
 	@Column(name = "end_date")
-	@DateTimeFormat
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@NotNull(message = "结束时间不能为空")
 	private java.util.Date endDate;
 
